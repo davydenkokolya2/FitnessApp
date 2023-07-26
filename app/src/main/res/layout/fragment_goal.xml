@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ui.goal.GoalFragment">
+
+
+    <ImageView
+        android:id="@+id/imageView43"
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_orange_line"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView44"
+        app:layout_constraintEnd_toEndOf="@+id/rvGoal"
+        app:layout_constraintStart_toStartOf="@+id/rvGoal"
+        app:layout_constraintTop_toTopOf="@+id/rvGoal" />
+
+    <ImageView
+        android:id="@+id/imageView44"
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_orange_line"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rvGoal"
+        app:layout_constraintEnd_toEndOf="@+id/rvGoal"
+        app:layout_constraintStart_toStartOf="@+id/rvGoal"
+        app:layout_constraintTop_toBottomOf="@+id/imageView43" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGoal"
+        android:layout_width="248dp"
+        android:layout_height="258dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNextGoal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/integralcf_regular"
+        android:gravity="center"
+        android:text="@string/what_s_your_goal"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="70dp"
+        android:fontFamily="@font/integralcf_regular"
+        android:gravity="center"
+        android:text="@string/this_helps_us"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <ImageView
+        android:id="@+id/btnNextGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="46dp"
+        android:src="@drawable/icon_button_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnBackGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="44dp"
+        android:src="@drawable/icon_button_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

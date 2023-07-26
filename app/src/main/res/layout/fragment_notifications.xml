@@ -1,13 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.notification.Notifications">
+    android:background="@color/background"
+    tools:context=".ui.notification.NotificationsFragment">
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/custom_radio_group"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_radio_button"
+            android:button="@null"
+            android:checked="true"
+            android:fontFamily="@font/open_sans"
+            android:gravity="center"
+            android:text="@string/newText"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/radioButton2"
+            app:layout_constraintEnd_toStartOf="@+id/radioButton2"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_radio_button"
+            android:button="@null"
+            android:fontFamily="@font/open_sans"
+            android:gravity="center"
+            android:text="@string/events"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toStartOf="@+id/radioButton3"
+            app:layout_constraintStart_toEndOf="@+id/radioButton" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_radio_button"
+            android:button="@null"
+            android:fontFamily="@font/open_sans"
+            android:gravity="center"
+            android:text="@string/all"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/radioButton2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/radioButton2" />
+
+    </RadioGroup>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/integralcf_regular"
+        android:gravity="center"
+        android:text="@string/notifications"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/ivFirstNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/icon_first_notification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivFIrstTrash"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <ImageView
+        android:id="@+id/ivFIrstTrash"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/icon_red_trash"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/ivFirstNotification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivFirstNotification"
+        app:layout_constraintTop_toTopOf="@+id/ivFirstNotification" />
+
+    <ImageView
+        android:id="@+id/ivThirdNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/icon_third_notification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivThirdTrash"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivSecondNotification" />
+
+    <ImageView
+        android:id="@+id/ivSecondTrash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_red_trash"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/ivSecondNotification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivSecondNotification"
+        app:layout_constraintTop_toTopOf="@+id/ivSecondNotification" />
+
+    <ImageView
+        android:id="@+id/ivThirdTrash"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/icon_red_trash"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/ivThirdNotification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivThirdNotification"
+        app:layout_constraintTop_toTopOf="@+id/ivThirdNotification" />
+
+    <ImageView
+        android:id="@+id/ivSecondNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/icon_second_notification"
+        app:layout_constraintEnd_toStartOf="@+id/ivSecondTrash"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivFirstNotification"
+        android:contentDescription="TODO" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

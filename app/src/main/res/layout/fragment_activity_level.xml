@@ -1,13 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activity_level.ActivityLevel">
+    android:background="@color/background"
+    tools:context=".ui.activity_level.ActivityLevelFragment">
+
+    <ImageView
+        android:id="@+id/imageView47"
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_orange_line"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView48"
+        app:layout_constraintEnd_toEndOf="@+id/rvActivityLevel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/rvActivityLevel"
+        app:layout_constraintTop_toTopOf="@+id/rvActivityLevel" />
+
+    <ImageView
+        android:id="@+id/imageView48"
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_orange_line"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rvActivityLevel"
+        app:layout_constraintEnd_toEndOf="@+id/rvActivityLevel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/rvActivityLevel"
+        app:layout_constraintTop_toBottomOf="@+id/imageView47" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvActivityLevel"
+        android:layout_width="248dp"
+        android:layout_height="258dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnStartActivityLevel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:id="@+id/textView12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="43dp"
+        android:fontFamily="@font/integralcf_regular"
+        android:gravity="center"
+        android:text="@string/your_reg"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="70dp"
+        android:fontFamily="@font/integralcf_regular"
+        android:gravity="center"
+        android:text="@string/this_help"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <ImageView
+        android:id="@+id/btnStartActivityLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="46dp"
+        android:src="@drawable/icon_button_start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnBackActivityLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="44dp"
+        android:src="@drawable/icon_button_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

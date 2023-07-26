@@ -2,87 +2,111 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/onboarding">
+    android:id="@+id/nav_graph">
 
     <fragment
         android:id="@+id/activityLevel"
-        android:name="com.example.fitnessapp.ui.activity_level.ActivityLevel"
+        android:name="com.example.fitnessapp.ui.activity_level.ActivityLevelFragment"
         android:label="fragment_activity_level"
         tools:layout="@layout/fragment_activity_level" />
     <fragment
         android:id="@+id/age"
-        android:name="com.example.fitnessapp.ui.age.Age"
+        android:name="com.example.fitnessapp.ui.age.AgeFragment"
         android:label="fragment_age"
         tools:layout="@layout/fragment_age" />
     <fragment
         android:id="@+id/gender"
-        android:name="com.example.fitnessapp.ui.gender.Gender"
+        android:name="com.example.fitnessapp.ui.gender.GenderFragment"
         android:label="fragment_gender"
         tools:layout="@layout/fragment_gender" />
     <fragment
         android:id="@+id/height"
-        android:name="com.example.fitnessapp.ui.height.Height"
+        android:name="com.example.fitnessapp.ui.height.HeightFragment"
         android:label="fragment_height"
         tools:layout="@layout/fragment_height" />
     <fragment
-        android:id="@+id/home2"
-        android:name="com.example.fitnessapp.ui.home.Home"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
-    <fragment
-        android:id="@+id/insight"
-        android:name="com.example.fitnessapp.ui.insight.Insight"
-        android:label="fragment_insight"
-        tools:layout="@layout/fragment_insight" />
-    <fragment
-        android:id="@+id/notifications"
-        android:name="com.example.fitnessapp.ui.notification.Notifications"
-        android:label="fragment_notifications"
-        tools:layout="@layout/fragment_notifications" />
-    <fragment
         android:id="@+id/notificationsSettings"
-        android:name="com.example.fitnessapp.ui.notifications_settings.NotificationsSettings"
+        android:name="com.example.fitnessapp.ui.notifications_settings.NotificationsSettingsFragment"
         android:label="fragment_notifications_settings"
         tools:layout="@layout/fragment_notifications_settings" />
     <fragment
-        android:id="@+id/onboarding"
-        android:name="com.example.fitnessapp.ui.onboarding.Onboarding"
-        android:label="fragment_onboarding"
-        tools:layout="@layout/fragment_onboarding" />
-    <fragment
         android:id="@+id/profile"
-        android:name="com.example.fitnessapp.ui.profile.Profile"
+        android:name="com.example.fitnessapp.ui.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/settings"
-        android:name="com.example.fitnessapp.ui.settings.Settings"
+        android:name="com.example.fitnessapp.ui.settings.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/training"
-        android:name="com.example.fitnessapp.ui.training.Training"
+        android:name="com.example.fitnessapp.ui.training.TrainingFragment"
         android:label="fragment_training"
         tools:layout="@layout/fragment_training" />
     <fragment
         android:id="@+id/unitsOfMeasure"
-        android:name="com.example.fitnessapp.ui.units_of_measure.UnitsOfMeasure"
+        android:name="com.example.fitnessapp.ui.units_of_measure.UnitsOfMeasureFragment"
         android:label="fragment_units_of_measure"
         tools:layout="@layout/fragment_units_of_measure" />
     <fragment
         android:id="@+id/weight"
-        android:name="com.example.fitnessapp.ui.weight.Weight"
+        android:name="com.example.fitnessapp.ui.weight.WeightFragment"
         android:label="fragment_weight"
         tools:layout="@layout/fragment_weight" />
     <fragment
-        android:id="@+id/workoutCategories"
-        android:name="com.example.fitnessapp.ui.workout_categories.WorkoutCategories"
+        android:id="@+id/workoutPlanDetail"
+        android:name="com.example.fitnessapp.ui.workout_plan_detail.WorkoutPlanDetailFragment"
+        android:label="fragment_workout_plan_detail"
+        tools:layout="@layout/fragment_workout_plan_detail" />
+    <fragment
+        android:id="@+id/goalFragment"
+        android:name="com.example.fitnessapp.ui.goal.GoalFragment"
+        android:label="fragment_goal"
+        tools:layout="@layout/fragment_goal" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.fitnessapp.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/insightFragment"
+        android:name="com.example.fitnessapp.ui.insight.InsightFragment"
+        android:label="fragment_insight"
+        tools:layout="@layout/fragment_insight" />
+    <fragment
+        android:id="@+id/navBarFragment"
+        android:name="com.example.fitnessapp.ui.nav_bar.NavBarFragment"
+        android:label="fragment_nav_bar"
+        tools:layout="@layout/fragment_nav_bar" />
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.example.fitnessapp.ui.notification.NotificationsFragment"
+        android:label="fragment_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/workoutCategoriesFragment"
+        android:name="com.example.fitnessapp.ui.workout_categories.WorkoutCategoriesFragment"
         android:label="fragment_workout_categories"
         tools:layout="@layout/fragment_workout_categories" />
     <fragment
-        android:id="@+id/workoutPlanDetail"
-        android:name="com.example.fitnessapp.ui.workout_plan_detail.WorkoutPlanDetail"
-        android:label="fragment_workout_plan_detail"
-        tools:layout="@layout/fragment_workout_plan_detail" />
+        android:id="@+id/onboardingHostFragment"
+        android:name="com.example.fitnessapp.ui.onboarding_host.OnboardingHostFragment"
+        android:label="fragment_onboarding_host"
+        tools:layout="@layout/fragment_onboarding_host" />
+    <fragment
+        android:id="@+id/onboarding1Fragment"
+        android:name="com.example.fitnessapp.ui.onboarding1.Onboarding1Fragment"
+        android:label="fragment_onboarding1"
+        tools:layout="@layout/fragment_onboarding1" />
+    <fragment
+        android:id="@+id/onboarding2Fragment"
+        android:name="com.example.fitnessapp.ui.onboarding2.Onboarding2Fragment"
+        android:label="fragment_onboarding2"
+        tools:layout="@layout/fragment_onboarding2" />
+    <fragment
+        android:id="@+id/onboarding3Fragment"
+        android:name="com.example.fitnessapp.ui.onboarding3.Onboarding3Fragment"
+        android:label="fragment_onboarding3"
+        tools:layout="@layout/fragment_onboarding3" />
 </navigation>
